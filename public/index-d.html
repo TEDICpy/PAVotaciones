@@ -6,6 +6,12 @@
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet"/>
+    <script> 
+        $(function(){
+            $("#introduccion").load("introduccion.html"); 
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 <body data-ng-controller="SelectionController">
 <div class="container">
@@ -162,67 +168,9 @@
         </div>
     </div>
 </div>
-<div class="bottom-menu">
-    <div class="container">
-        <div class="row">
-            <div class="span3 brand">Votaciones PA
-            <div class="span2">
-                <h5 class="title">Secciones</h5>
-                <ul class="bottom-links">
-                    <li><a href="#intromodal" data-toggle="modal">Acerca de</a></li>
-					<li><a href="#iframe" data-toggle="modal">Embeber votación</a></li>
-                </ul>
-            </div>
-            <div class="span2">
-                <h5 class="title">Desarrollo</h5>
-                <ul class="bottom-links">
-                    <li><a href="http://www.tedic.org" target="_blank">TEDIC</a></li>
-                </ul>
-            </div>
-            <div class="span3">
-                <h5 class="title">Colaboradores</h5>
-                <ul class="bottom-links">
-                    <li><a href="http://www.decadavotada.com.ar" target="_blank">Década Votada</a></li>
-                </ul>
-            </div>
-            <div class="span2">
-                <a href="http://www.tedic.org" target="_blank"><img src="http://www.tedic.org/img/tedic.png" width="140" alt="ONG TEDIC"></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal hide fade" id="iframe">
-    <div class="modal-header">
-	<p>Copie y pegue el siguiente código HTML en su página web para embeber esta votación:</p>
-	<pre><code>&lt;iframe src="{{ permaiframe }}" width="700" height="800" frameborder="0" scrolling="no"&gt;&lt;iframe&gt;</code></pre>
-	</div>
-</div>
-<div class="modal hide fade" id="intromodal">
-    <div class="modal-header">
-        <h3>Década Votada</h3>
-    </div>
-    <div class="modal-body">
-        <table id="referencetable">
-            <tr>
-                <td class="quadrant0">Afirmativos</td>
-                <td class="quadrant1">Negativos</td>
-            </tr>
-            <tr>
-                <td class="quadrant2">Abstenciones</td>
-                <td class="quadrant3">Ausentes</td>
-            </tr>
-        </table>
-        <p>FIXME: descripción</p>
-		<p>Utilice los selectores de Año, Fecha y Asunto para elegir la votación.</p>
-		<p>En los cuadrantes se ubicará cada legislador coloreado por bloque político, según si su voto fue <span class="quadrant0">Afirmativo</span> o <span class="quadrant1">Negativo</span>, si optó por la <span class="quadrant2">Abstención</span> o si estuvo <span class="quadrant3">Ausente</span>.</p>
-		<p>El panel de la derecha mostrará el resultado, base y tipo de mayoría requerida, asistencia y números de cada votación, incluyendo el voto del presidente cuando lo hubo.</p>
-		<p>Utilice las casillas de verificación de bloques y legisladores para resaltarlos y observar mejor sus trayectorias entre votaciones.</p>
-    </div>
-    <div class="modal-footer">
-        <a class="btn btn-info btn-large" data-dismiss="modal">Diputados</a>
-<!--        <a href="index-s.html" class="btn btn-danger btn-large">Senadores</a>-->
-    </div>
-</div>
+
+<div id="introduccion"></div>
+<div id="footer"></div>
 
 <script src="assets/js/d3.v3.min.js"></script>
 <script src="assets/js/d3tooltip.js"></script>
