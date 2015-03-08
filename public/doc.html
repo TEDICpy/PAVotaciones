@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Documentación</title>
+    <title>Documentación de ParlamentoAbierto</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet"/>
@@ -10,17 +10,28 @@
 <div class="container">
     <div class="row">
         <div class="span12">
-            <h1>Votaciones legislativas</h1>
+            <h1>Votaciones legislativas - Diputados</h1>
             <h2>Documentación</h2>
-            <p>Esta <a href="https://github.com/hhba/towlandia" target="_blank">aplicación</a> utiliza <a href="http://d3js.org/" target="_blank">D3.js</a> y <a href="http://www.google.com/drive/apps.html#fusiontables" target="_blank">Fusion Tables</a> de Google para generar visualizaciones de votaciones nominales de cuerpos legislativos detallando la posición asumida de cada uno de los integrantes, su pertenencia a bloques políticos, el resultado y otros datos de cada votación.</p>
-            <p>Para nuestro ejemplo hemos utilizado las <a href="http://www.hcdn.gov.ar/secadmin/ds_electronicos/actas_votacion-portada.html" target="_blank">actas de votaciones nominales de la Cámara de Diputados de la Nación Argentina</a>, disponibles individualmente en documentos PDF. Cada acta contiene los datos generales de la votación y el voto de cada legislador. Volcamos toda esta información en cuatro tablas Fusion Tables:
+            <p>Esta <a href="https://github.com/proyectosbeta/parlamentoAbierto" target="_blank">aplicaci&oacute;n</a> es un fork de 
+            <a href="https://github.com/hhba/towlandia" target="_blank">D&eacute;cada votada</a> que utiliza <a href="http://d3js.org/" 
+                target="_blank">D3.js</a> y <a href="http://www.google.com/drive/apps.html#fusiontables" target="_blank">Fusion Tables</a> 
+             de Google para generar visualizaciones de votaciones nominales de cuerpos legislativos detallando la posición asumida de 
+             cada uno de los integrantes, su pertenencia a bloques políticos, el resultado y otros datos de cada votación.</p>
+            <p>
+                Para conseguir los datos de los diputados hemos utilizado las 
+                <a href="http://www.diputados.gov.py/ww2/?pagina=sesiondigital" 
+                target="_blank">Honorable Cámara de Diputados de la República del Paraguay</a>, disponibles individualmente 
+                en documentos RTF. Cada documento contiene los datos generales de la votación y el voto de cada legislador. 
+                Volcamos toda esta información en cuatro tablas en Google Fusion Tables:
 
- <a  href="https://www.google.com/fusiontables/DataSource?docid=1OAvsKOSuQE3NzXNKGLwQpBDj9iK3mLweHb8Lcfg">Diputados</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1GNJAVHF_7xPZFhTc_w4RLxcyiD_lAiYTgVlA0D8">Votaciones diputados</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1gUTqf8A-nuvBGygRnVDcSftngYZ-z9OvxBs59M0">Bloques diputados,</a> <a href="https://www.google.com/fusiontables/DataSource?docid=1ELTXADIfpiUWfQfL9D8ia8p4VTw17UOoKXxsci4#rows:id=3">Asuntos dipuados</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1rhy-SIM34RqWGLRnRoA7UeBavBc9GUf6EvnlXZg#rows:id=1">Senadores</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1vKsuSvTBS_pwgJl7dcbtiMWrOrilaroritbDOOI#rows:id=1">Bloques senado</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1ihmsVlVwX1sTp4JQ8HK4k07vS8e8_orVY_NvJ9E#rows:id=1">Votaciones senado</a>, <a href="https://www.google.com/fusiontables/DataSource?docid=1M046BCqwBNjxe9CXbcvUUi0JT6HohC8Gq4S7gRM#rows:id=1">Asuntos senado</a>.</p>
+<!-- 	 			<a href="https://www.google.com/fusiontables/DataSource?docid=1OAvsKOSuQE3NzXNKGLwQpBDj9iK3mLweHb8Lcfg">Diputados</a>, 
+	 			<a href="https://www.google.com/fusiontables/DataSource?docid=1GNJAVHF_7xPZFhTc_w4RLxcyiD_lAiYTgVlA0D8">Votaciones diputados</a>, 
+	 			<a href="https://www.google.com/fusiontables/DataSource?docid=1gUTqf8A-nuvBGygRnVDcSftngYZ-z9OvxBs59M0">Bloques diputados,</a> 
+	 			<a href="https://www.google.com/fusiontables/DataSource?docid=1ELTXADIfpiUWfQfL9D8ia8p4VTw17UOoKXxsci4#rows:id=3">Asuntos dipuados</a>.  -->
+ 			</p>
 <br>
-Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo en formato CSV coprimido</a>.
   		<hr>
-            <h4>Tabla asuntos</h4>
-            <p class="doc-img"><img src="assets/img/asuntos.gif" alt="tabla asuntos"></p>
+            <h4>Tabla asuntos-diputados</h4>
             <table class="table table-bordered table-condensed">
                 <thead>
                     <tr>
@@ -36,7 +47,7 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                         <td>Identificador de votación individual</td>
                     </tr>
                     <tr>
-                        <td>sesion</td>
+                        <td>sesion (<i>no se tiene informaci&oacute;n</i>)</td>
                         <td>Texto</td>
                         <td>Período parlamentario, Congreso o Legislatura, Sesión, Reunión</td>
                     </tr>
@@ -61,12 +72,12 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                         <td>Hora de la votación en formato HH:MM</td>
                     </tr>
                     <tr>
-                        <td>base</td>
+                        <td>base (<i>no se tiene informaci&oacute;n</i>)</td>
                         <td>Texto</td>
                         <td>Población de integrantes del cuerpo sobre la que se cuenta la mayoría necesaria reglamentariamente para aprobar el asunto (Votos emitidos, Miembros del cuerpo)</td>
                     </tr>
                     <tr>
-                        <td>mayoria</td>
+                        <td>mayoria (<i>no se tiene informaci&oacute;n</i>)</td>
                         <td>Texto</td>
                         <td>Mayoría mínima necesaria para aprobar el asunto (Más de la mitad, Dos tercios, Tres cuartos)</td>
                     </tr>
@@ -119,7 +130,6 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
             </table>
 			<hr>
             <h4>Tabla diputados</h4>
-            <p class="doc-img"><img src="assets/img/diputados.gif" alt="tabla diputados"></p>
             <p>En nuestro ejemplo la tabla diputados resulta de una consulta <code>SELECT DISTINCT nombre, distrito</code> de la tabla <em>votaciones</em> con los nombres de los legisladores en texto, antes de su codificación.</p>
             <table class="table table-bordered table-condensed">
                 <thead>
@@ -132,8 +142,8 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                 <tbody>
                     <tr>
                         <td>diputadoId</td>
-                        <td>Número</td>
-                        <td>Identificador del legislador individual. Corresponde al campo diputado de la tabla votaciones</td>
+                        <td>N&uacute;mero</td>
+                        <td>Identificador del diputado individual. Corresponde al campo diputado de la tabla votaciones</td>
                     </tr>
                     <tr>
                         <td>nombre</td>
@@ -145,11 +155,15 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                         <td>Texto</td>
                         <td>Distrito del legislador</td>
                     </tr>
+                    <tr>
+                        <td>id_bloque</td>
+                        <td>N&uacute;mero</td>
+                        <td>Indetificador del bloque al que pertenece el diputado</td>
+                    </tr>
                 </tbody>
             </table>
 			<hr>
-            <h4>Tabla bloques</h4>
-            <p class="doc-img"><img src="assets/img/bloques.gif" alt="tabla bloques"></p>
+            <h4>Tabla bloques-diputados</h4>
             <table class="table table-bordered table-condensed">
                 <thead>
                     <tr>
@@ -177,8 +191,7 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                 </tbody>
             </table>
 			<hr>
-            <h4>Tabla votaciones</h4>
-            <p class="doc-img"><img src="assets/img/votaciones.gif" alt="tabla votaciones"></p>
+            <h4>Tabla votaciones-diputados</h4>
             <table class="table table-bordered table-condensed">
                 <thead>
                     <tr>
@@ -196,7 +209,7 @@ Adicionalmente puede descargar el <a href="DecadaVotadaCSV.zip">dataset completo
                     <tr>
                         <td>diputadoId</td>
                         <td>Número</td>
-                        <td>Identificador de legislador individual. En nuestro ejemplo los individualizamos concatenando nombre y distrito</td>
+                        <td>Identificador del diputado. En nuestro ejemplo los individualizamos concatenando nombre y distrito</td>
                     </tr>
                     <tr>
                         <td>bloqueId</td>
