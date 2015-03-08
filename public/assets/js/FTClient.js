@@ -8,7 +8,7 @@ var FTClient = function(apiKey) {
 
         var url = this.getUrl(query);
 
-        console.log("Querying " + url + "...");
+        //console.log("Querying " + url + "...");
         $.ajax({
             url: url,
             dataType: 'jsonp',
@@ -26,7 +26,8 @@ var FTClient = function(apiKey) {
                 (query.tail ? ' ' + query.tail : '');
 
 
-        var url = ['https://www.googleapis.com/fusiontables/v1/query'];
+        //var url = ['https://www.googleapis.com/fusiontables/v1/query'];
+	var url = ['server/consultas.php'];
         url.push('?sql=' + encodeURIComponent(queryStr));
         url.push('&key=' + this.apiKey);
         url.push('&callback=?');
