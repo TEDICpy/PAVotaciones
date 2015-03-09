@@ -167,9 +167,9 @@ controllers.controller('SelectionController', ['$scope', '$filter', 'Selection',
 
         // Blocks
         ftClient.query({
-            fields: ['bloqueId', 'COUNT()'],
+            fields: ['bloqueId', 'COUNT(*)'],
             table: NOMBRE_TABLA_VOTACIONES_DIPUTADOS,
-            tail: "WHERE asuntoId = '" + file.id + "' GROUP BY bloqueId ORDER BY COUNT() DESC"
+            tail: "WHERE asuntoId = '" + file.id + "' GROUP BY bloqueId ORDER BY COUNT(*) DESC"
         }, function(rows) {
             var blockOrder = rows.map(function(row) { return row[0] });
             var blockMembers = rows.map(function(row) { return row[1] });

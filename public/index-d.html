@@ -6,13 +6,34 @@
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet"/>
+
+    <script src="assets/js/Constantes.js"></script>
+    <script src="assets/js/d3.v3.min.js"></script>
+    <script src="assets/js/d3tooltip.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/flat-ui/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/flat-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="assets/flat-ui/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/flat-ui/js/bootstrap.min.js"></script>
+    <script src="assets/flat-ui/js/bootstrap-select.js"></script>
+    <script src="assets/flat-ui/js/bootstrap-switch.js"></script>
+    <script src="assets/flat-ui/js/flatui-checkbox.js"></script>
+    <script src="assets/flat-ui/js/flatui-radio.js"></script>
+    <script src="assets/flat-ui/js/jquery.tagsinput.js"></script>
+    <script src="assets/flat-ui/js/jquery.placeholder.js"></script>
+    <script src="assets/flat-ui/js/jquery.stacktable.js"></script>
+    <script src="assets/js/FTClient.js"></script>
+    <script src="assets/js/app-d.js"></script>
+    <script src="assets/js/votaciones-d.js"></script>
+    <script src="assets/jquerysvg/js/jquery.svg.min.js"></script>
+    <script src="assets/jquerysvg/js/jquery.svgdom.min.js"></script>
+    <script src="assets/js/index.js"></script>
     <script> 
         $(function(){
             $("#introduccion").load("introduccion.html"); 
             $("#footer").load("footer.html");
         });
     </script>
-    <script src="assets/js/Constantes.js"></script>
 </head>
 <body data-ng-controller="SelectionController">
 <div class="container">
@@ -70,7 +91,7 @@
             <button class="btn btn-success btn-short pull-right" title="anterior" data-ng-show="vizShown" data-ng-click="prev()" data-ng-class="{disabled: firstFile}">
                 <i class="icon-chevron-left"></i>
             </button>
-            <a href="#iframe" data-toggle="modal" title="embeber la votación actual" class="btn btn-warning btn-short pull-right">
+            <a href="#iframe" data-toggle="modal" title="obtener enlace permanente" class="btn btn-warning btn-short pull-right">
 			<i class="icon-map-marker"></i>
 			</a>
 			<a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-info btn-short pull-right">
@@ -92,8 +113,8 @@
                 <ul class="unstyled ul-resultados">
                     <li><strong>Resultado: </strong> <span class="label label-large" data-ng-class="{'label-success': vote.resultado == 'AFIRMATIVO', 'label-important': vote.resultado == 'NEGATIVO'}">{{ vote.resultado }}</span></li>
                     <li><strong>Presidente: </strong><span class="label label-large" data-ng-class="{'label-success': vote.votopresidente == '0', 'label-important': vote.votopresidente == '1'}">{{ vote.presidente }}</span></li>
-                    <li><strong>Base: </strong> {{ vote.base }}</li>
-                    <li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>
+                    <!--<li><strong>Base: </strong> {{ vote.base }}</li>-->
+                    <!--<li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>-->
                 </ul>
 
                 <ul class="nav nav-list nav-list-vivid">
@@ -168,30 +189,18 @@
             </div>
         </div>
     </div>
+<!-- por lupa -->
+<div class="modal hide fade" id="iframe">
+    <div class="modal-header">
+        <p>El siguientes e un enlace permanente a esta votación:</p>
+        <pre><code>{{ permaiframe }}</code></pre>
+        </div>
 </div>
-
+<!-- fin por lupa -->
 <div id="introduccion"></div>
 <div id="footer"></div>
+</div>
 
-<script src="assets/js/d3.v3.min.js"></script>
-<script src="assets/js/d3tooltip.js"></script>
-<script src="assets/js/angular.min.js"></script>
-<script src="assets/flat-ui/js/jquery-1.8.3.min.js"></script>
-<script src="assets/flat-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="assets/flat-ui/js/jquery.ui.touch-punch.min.js"></script>
-<script src="assets/flat-ui/js/bootstrap.min.js"></script>
-<script src="assets/flat-ui/js/bootstrap-select.js"></script>
-<script src="assets/flat-ui/js/bootstrap-switch.js"></script>
-<script src="assets/flat-ui/js/flatui-checkbox.js"></script>
-<script src="assets/flat-ui/js/flatui-radio.js"></script>
-<script src="assets/flat-ui/js/jquery.tagsinput.js"></script>
-<script src="assets/flat-ui/js/jquery.placeholder.js"></script>
-<script src="assets/flat-ui/js/jquery.stacktable.js"></script>
-<script src="assets/js/FTClient.js"></script>
-<script src="assets/js/app-d.js"></script>
-<script src="assets/js/votaciones-d.js"></script>
-<script src="assets/jquerysvg/js/jquery.svg.min.js"></script>
-<script src="assets/jquerysvg/js/jquery.svgdom.min.js"></script>
-<script src="assets/js/index.js"></script>
+
 </body>
 </html>
