@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-ng-app="votaciones">
 <head>
-    <title>Década Votada</title>
+    <title>PA Votaciones</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
@@ -12,12 +12,13 @@
             $("#footer").load("footer.html");
         });
     </script>
+    <script src="assets/js/Constantes.js"></script>
 </head>
 <body data-ng-controller="SelectionController">
 <div class="container">
     <div class="row">
         <div class="span8">
-            <h1>Década Votada <small class="diputados">[diputados]</small></h1>
+            <h1>PA Votaciones <small class="diputados">[diputados]</small></h1>
         </div>
         <div class="span4">
             <p class="archivo">Seleccione votación por año y fecha</p>
@@ -72,7 +73,7 @@
             <a href="#iframe" data-toggle="modal" title="embeber la votación actual" class="btn btn-warning btn-short pull-right">
 			<i class="icon-map-marker"></i>
 			</a>
-			<a href="https://twitter.com/intent/tweet?text=Votacion%20nominal%3A&amp;tw_p=tweetbutton&amp;via=andy_tow;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-info btn-short pull-right">
+			<a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-info btn-short pull-right">
 			<i class="icon-globe"></i>
 			</a>
         </div>
