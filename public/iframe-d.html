@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-ng-app="votaciones">
 <head>
-    <title>Década Votada</title>
+    <title>PA Votaciones</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 <div class="container">
     <div class="row">
         <div class="span6">
-            <h3>Década Votada <sup class="diputados"><small>[diputados]</small></sup></h3>
+            <h4><a href="http://votaciones.parlamentoabierto.org.py">PA Votaciones</a> <sup class="diputados"><small>[diputados]</small></sup></h4>
         </div>
 		<div class="span2">
 		{{ selection.date | date:'dd/MM/yyyy' }}
@@ -154,8 +154,8 @@
                 <ul class="unstyled ul-resultados">
                     <li><strong>Resultado: </strong> <span class="label label-large" data-ng-class="{'label-success': vote.resultado == 'AFIRMATIVO', 'label-important': vote.resultado == 'NEGATIVO'}">{{ vote.resultado }}</span></li>
                     <li><strong>Presidente: </strong><span class="label label-large" data-ng-class="{'label-success': vote.votopresidente == '0', 'label-important': vote.votopresidente == '1'}">{{ vote.presidente }}</span></li>
-                    <li><strong>Base: </strong> {{ vote.base }}</li>
-                    <li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>
+                    <!--<li><strong>Base: </strong> {{ vote.base }}</li>-->
+                    <!--<li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>-->
                 </ul>
             </div>
 			<ul class="nav nav-tabs hide">
