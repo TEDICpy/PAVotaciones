@@ -1,7 +1,9 @@
 <?php
 require_once  'constantes.php';
 session_start();
-if(!$_SESSION['logged']){
+//if(!$_SESSION['logged']){
+// Cambio para evitar el warning de PHP
+if(!isset($_SESSION['logged'])){
     if(!empty($_POST['user']) && !empty($_POST['pass'])){
         //$token = GoogleClientLogin($_POST['user'], $_POST['pass'], "fusiontables");
       // print_r(substr($token,0,5));
