@@ -6,6 +6,7 @@
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/tedic.css" rel="stylesheet"/>
 
     <script src="assets/js/Constantes.js"></script>
     <script src="assets/js/d3.v3.min.js"></script>
@@ -91,12 +92,6 @@
             <button class="btn btn-success btn-short pull-right" title="anterior" data-ng-show="vizShown" data-ng-click="prev()" data-ng-class="{disabled: firstFile}">
                 <i class="icon-chevron-left"></i>
             </button>
-            <a href="#iframe" data-toggle="modal" title="obtener enlace permanente" class="btn btn-warning btn-short pull-right">
-			<i class="icon-map-marker"></i>
-			</a>
-			<a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-info btn-short pull-right">
-			<i class="icon-globe"></i>
-			</a>
         </div>
     </div>
 	<div class="row row-selects">
@@ -187,14 +182,37 @@
                     <button class="chk-diputado-ninguno btn-link">Ninguno</button>
                 </div>
             </div>
+	    <div class="compartir">
+		<ul class="unstyled">
+                  <li><strong>Comparte:</strong>
+		    <a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-primary btn-short pull-right">
+			<i class="icon-map-marker"></i>
+		    </a>
+		    <a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank" data-toggle="modal" title="comparte por FB la votación actual" class="btn btn-info btn-short pull-right">
+			<i class="icon-globe"></i>
+		    </a>
+	            <a href="#iframe" data-toggle="modal" title="obtener código para tu sitio" class="btn btn-warning btn-short pull-right">
+			<i class="icon-star"></i>
+		    </a>
+	            <a href="#enlaceperm" data-toggle="modal" title="obtener enlace permanente" class="btn btn-danger btn-short pull-right">
+			<i class="icon-envelope"></i>
+		    </a>
+		  </li>
+	    </div>
         </div>
     </div>
 <!-- por lupa -->
-<div class="modal hide fade" id="iframe">
+<div class="modal hide fade" id="enlaceperm">
     <div class="modal-header">
         <p>El siguiente es un enlace permanente a esta votación:</p>
         <pre><code>{{ permalink }}</code></pre>
         </div>
+</div>
+<div class="modal hide fade" id="iframe">
+    <div class="modal-header">
+        <p>Copia y pega el siguiente código HTML en tu sitio par embeber esta votación:</p>
+        <pre><code>&lt;iframe src="{{ permaiframe }}" width="700" height="800" frameborder="0" scrolling="no"&gt;&lt;iframe&gt;</code></pre>
+    </div>
 </div>
 <!-- fin por lupa -->
 <div id="introduccion"></div>
