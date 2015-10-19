@@ -8,6 +8,9 @@
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/tedic.css" rel="stylesheet"/>
 
+    <!-- Por lupa para comprartir en GNUSocial-->
+    <script src="assets/js/gs-share-es.js"></script>
+    <script src="assets/js/gs-share.js"></script>
     <script src="assets/js/Constantes.js"></script>
     <script src="assets/js/d3.v3.min.js"></script>
     <script src="assets/js/d3tooltip.js"></script>
@@ -40,7 +43,8 @@
 <div class="container">
     <div class="row">
         <div class="span8">
-            <h1><a href="http://www.parlamentoabierto.org.py/">PA Votaciones</a> <small class="diputados">[diputados]</small></h1>
+	    <!--<a href="#intromodal" data-toggle="modal">Intro</a>-->
+            <h1><a href="http://votaciones.parlamentoabierto.org.py/">PA Votaciones</a> <small class="diputados">[diputados]</small></h1>
         </div>
         <div class="span4">
             <p class="archivo">Seleccione votación por año y fecha</p>
@@ -198,7 +202,15 @@
 			<i class="icon-envelope"></i>
 		    </a>
 		  </li>
-	    </div>
+	      </div>
+	      <br>
+	      <div class="gs-share">
+		<ul class="unstyled">
+                  <li><strong>Redes libres:</strong>
+                     <button data-url="{{ permalink }}" data-title="Mira esta votación de diputados via @tedicpy : " class="js-gs-share gs-share--icon"></button>
+		  </li>
+		</ul>
+	      </div>
         </div>
     </div>
 <!-- por lupa -->

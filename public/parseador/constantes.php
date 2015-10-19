@@ -14,4 +14,4 @@
     define("HOST", "localhost");
 
     // Path de los archivos que se generan.
-    define("PATH_ARCHIVOS_GENERADOS", "/www/votaciones2/public/archivosGenerados/");
+    define("PATH_ARCHIVOS_GENERADOS", "/www/votaciones/public/archivosGenerados/");
