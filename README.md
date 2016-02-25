@@ -4,10 +4,6 @@
 
 Esta es una versión modificada de Década Votada. En vez de FusionTables utilizamos MySQL. 
 
-## Documentación
-
-FIXME
-
 ##Installación
 
 Requisitos para tener funcionando en un servidor:
@@ -25,6 +21,8 @@ Pasos:
 7. Darle permisos 777 a la carpeta parseador: `chmod 777 -R parseador`
 
 ##Cargar asunto y votación.
+
+(Este apartado corresponde a un parseador de RTFs que se hizo específicamente para un formato de texto que publica la Cámara de Diputados de Paraguay)
 
 1. Descargar el documento RTF (aplica solo a los RTFs generados por la Cámara de Diputados de Paraguay, por ejemplo, algunos de los RTFs que aparecen en la sesión del [5 de marzo de 2015](http://www.diputados.gov.py/plenaria/150305-SO/))
 2. Subirlo con la herramienta  "parseador", logueándose con el usuario *carga* (definido anteriormente)
