@@ -114,8 +114,8 @@
     </div>
 	<div class="row row-selects">
 		 <div class="span3"><strong>{{ vote.sesion }}</strong></div>
-		 <div class="span9">{{ selection.file.titulo }}</div>
-    </div>
+		 <div class="span9">{{ selection.file.titulo }}</div> 
+	</div>
     <div class="row mbl">
         <div class="span9">
             <div id="cuadrantes">
@@ -193,7 +193,11 @@
                             <div>
                                 <input type="checkbox" class="chk-diputado" value="{{ congressman.id }}"/>
 					<div class="key" style="background-color: {{ congressmenBlock }}"></div>
-                                <p class="voto{{ congressman.vote }}">{{ congressman.name }}</p>
+					<p class="voto{{ congressman.vote }}">
+					  <a target="_blank" href="http://parlamentoabierto.org.py/parlamentarios/{{ congressman.id }}">
+					    {{ congressman.name }}
+					  </a>
+					</p>
                             </div>
     			</li>
                     </ul>

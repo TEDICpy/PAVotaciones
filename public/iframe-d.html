@@ -159,7 +159,7 @@
                     <!--<li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>-->
                 </ul>
             </div>
-			<ul class="nav nav-tabs hide">
+	    <ul class="nav nav-tabs hide">
                 <li class="active"><a href="#tab-bloques" data-toggle="tab" class="tab-btn">Bloques</a></li>
                 <li><a href="#tab-diputados" data-toggle="tab" class="tab-btn">Diputados</a></li>
             </ul>
@@ -182,7 +182,9 @@
                             <div>
                                 <input type="checkbox" class="chk-diputado" value="{{ congressman.id }}"/>
 					<div class="key" style="background-color: {{ congressmenBlock }}"></div>
-                                <p class="voto{{ congressman.vote }}">{{ congressman.name }}</p>
+					<p class="voto{{ congressman.vote }}">
+					  <a href="{{ congressman.id }}" --{{ congressman.name }} --</a>
+					</p>
                             </div>
     			</li>
                     </ul>
