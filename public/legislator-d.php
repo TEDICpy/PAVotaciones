@@ -37,7 +37,7 @@
 			</div>
 	</div>
 	<div class="row">
-	<table class="table table-striped" style="overflow: auto; height:324px; width:720px; text-align:center; display:block";">
+	<table class="table table-striped" style="overflow: auto; height:324px; width:720px; text-align:center; display:block;">
 	<tr>
 	<th><center><small>Per&iacute;odo</small></center></th>
 	<th><center><small>Bloque</small></center></th>
