@@ -253,6 +253,9 @@ h1 small.senadores {
 }
 .bottom-menu {
     padding: 20px 0;
+    background-color:#00162E;
+    position:absolute;
+    width:100%;
 }
 .doc-img {
     padding-bottom: 10px;
