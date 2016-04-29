@@ -7,6 +7,7 @@
     <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/tedic.css" rel="stylesheet"/>
+    <link href="assets/css/main.css" rel="stylesheet"/>
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
@@ -48,12 +49,14 @@
     <script src="assets/js/index.js"></script>
     <script> 
         $(function(){
-            $("#introduccion").load("introduccion.html"); 
-            $("#footer").load("footer.html");
+          $("#introduccion").load("introduccion.html"); 
+          $("#footer").load("footer.html");
+	  $("#header").load("header.html");
         });
     </script>
 </head>
-<body data-ng-controller="SelectionController">
+<div id="header"></div>
+<body data-ng-controller="SelectionController" style="background-color:#E5E5C9">
 <div class="container">
     <div class="row">
         <div class="span8">
@@ -245,10 +248,9 @@
     </div>
 </div>
 <!-- fin por lupa -->
+</div>
 <div id="introduccion"></div>
 <div id="footer"></div>
-</div>
-
-
 </body>
+
 </html>

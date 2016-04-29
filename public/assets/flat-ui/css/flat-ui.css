@@ -894,7 +894,7 @@ a.muted:focus {
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
-  font-size: 14.994px;
+  font-size: 14px;
   /* 15px */
 
   font-weight: 500;
