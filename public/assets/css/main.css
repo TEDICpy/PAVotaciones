@@ -810,17 +810,10 @@ h4 span.nostyle {
 /* Footer */
 
 #footer {
-  /* position: absolute; */
   width: 100%;
-  /* Set the fixed height of the footer here */
-  /*height: 70px;*/
   background: #00162E;
   color: #A6A691;
-  /*padding: 30px 0;
-  margin-top: 60px;*/  
-  /* padding-top: 45px; */
-  /* margin-top: 100px; */
-  padding-bottom:0px;
+  padding: 30px 0 30px 0;
 }
 
 #footer a {
