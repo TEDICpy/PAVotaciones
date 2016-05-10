@@ -37,11 +37,11 @@ h5 {
 }
 
 a {
-  color: #f4a458;
+  color: rgb(103, 103, 90);
 }
 
 a:hover {
-  color: #dd8740;
+  color: rgb(50, 50, 50);
 }
 
 a:visited {
