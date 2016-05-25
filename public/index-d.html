@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-ng-app="votaciones">
-<head>
+  <head>
     <title>PA Votaciones</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -8,21 +8,21 @@
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/tedic.css" rel="stylesheet"/>
     <link href="assets/css/main.css" rel="stylesheet"/>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.tedic.org/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 9]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//piwik.tedic.org/piwik.php?idsite=9" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+    <!-- Piwik -->
+    <script type="text/javascript">
+     var _paq = _paq || [];
+     _paq.push(['trackPageView']);
+     _paq.push(['enableLinkTracking']);
+     (function() {
+       var u="//piwik.tedic.org/";
+       _paq.push(['setTrackerUrl', u+'piwik.php']);
+       _paq.push(['setSiteId', 9]);
+       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+     })();
+    </script>
+    <noscript><p><img src="//piwik.tedic.org/piwik.php?idsite=9" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
     <!-- Por lupa para comprartir en GNUSocial-->
     <script src="gs-share/js/gs-share.js"></script>
     <script src="gs-share/js/locale/es.js"></script>
@@ -48,209 +48,209 @@
     <script src="assets/jquerysvg/js/jquery.svgdom.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script> 
-        $(function(){
-          $("#introduccion").load("introduccion.html"); 
-          $("#footer").load("footer.html");
-	  $("#header").load("header.html");
-        });
+     $(function(){
+       $("#introduccion").load("introduccion.html"); 
+       $("#footer").load("footer.html");
+       $("#header").load("header.html");
+     });
     </script>
-</head>
-<div id="header"></div>
-<body data-ng-controller="SelectionController" style="background-color:#E5E5C9">
-<div class="container">
-    <div class="row">
+  </head>
+  <div id="header"></div>
+  <body data-ng-controller="SelectionController" style="background-color:#E5E5C9">
+    <div class="container">
+      <div class="row">
         <div class="span8">
-	    <!--<a href="#intromodal" data-toggle="modal">Intro</a>-->
-            <h1><a href="http://votaciones.parlamentoabierto.org.py/">PA Votaciones</a> <small class="diputados">[diputados]</small></h1>
+	  <!--<a href="#intromodal" data-toggle="modal">Intro</a>-->
+          <h1><a href="http://votaciones.parlamentoabierto.org.py/">PA Votaciones</a> <small class="diputados">[diputados]</small></h1>
         </div>
         <div class="span4">
-            <p class="archivo">Seleccione votación por año y fecha</p>
+          <p class="archivo">Seleccione votación por año y fecha</p>
         </div>
-    </div>
-    <div class="row row-selects">
+      </div>
+      <div class="row row-selects">
         <div class="span11">
-            <div class="btn-group" data-ng-cloak>
-                <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-                <button class="btn btn-info" data-ng-class="{ disabled: !years }"><strong>Año</strong><span data-ng-show="selection.year">: {{ selection.year }}</span> </button>
-                <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !years }" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-inverse">
-                    <li data-ng-repeat="year in years" data-ng-class="{ 'selected' : selection.year == year }">
-                        <a href="#" data-ng-click="selectYear(year)">{{ year }}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="btn-group" data-ng-cloak>
-                <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-                <button class="btn btn-info" data-ng-class="{ disabled: !dates }"><strong>Fecha</strong><span data-ng-show="selection.date">: {{ selection.date | date:'dd/MM/yyyy' }}</span> </button>
-                <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !dates }" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-inverse">
-                    <li data-ng-repeat="date in dates" data-ng-class="{ 'selected' : selection.date == date }">
-                        <a href="#" data-ng-click="selectDate(date)">{{ date | date:'dd/MM/yyyy' }}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="btn-group" data-ng-cloak>
-                <i class="dropdown-arrow dropdown-arrow-inverse"></i>
-                <button class="btn btn-info" style="width: 100%" title = "{{ selection.file.titulo }}" data-ng-class="{ disabled: !files }"><strong>Asunto</strong><span data-ng-show="selection.file">: {{ selection.file.name | truncate:45 }}</span> </button>
-                <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !files }" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-inverse ul-select-exp">
-                    <li data-ng-repeat="file in files"  title = "{{ file.titulo }}" data-ng-class="{ 'selected' : selection.file.id == file.id }">
-                        <a href="#" data-ng-click="selectFile(file)">{{ file.name }}</a>
-                    </li>
-                </ul>
-            </div>
+          <div class="btn-group" data-ng-cloak>
+            <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+            <button class="btn btn-info" data-ng-class="{ disabled: !years }"><strong>Año</strong><span data-ng-show="selection.year">: {{ selection.year }}</span> </button>
+            <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !years }" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-inverse">
+              <li data-ng-repeat="year in years" data-ng-class="{ 'selected' : selection.year == year }">
+                <a href="#" data-ng-click="selectYear(year)">{{ year }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group" data-ng-cloak>
+            <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+            <button class="btn btn-info" data-ng-class="{ disabled: !dates }"><strong>Fecha</strong><span data-ng-show="selection.date">: {{ selection.date | date:'dd/MM/yyyy' }}</span> </button>
+            <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !dates }" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-inverse">
+              <li data-ng-repeat="date in dates" data-ng-class="{ 'selected' : selection.date == date }">
+                <a href="#" data-ng-click="selectDate(date)">{{ date | date:'dd/MM/yyyy' }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group" data-ng-cloak>
+            <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+            <button class="btn btn-info" style="width: 100%" title = "{{ selection.file.titulo }}" data-ng-class="{ disabled: !files }"><strong>Asunto</strong><span data-ng-show="selection.file">: {{ selection.file.name | truncate:45 }}</span> </button>
+            <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !files }" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-inverse ul-select-exp">
+              <li data-ng-repeat="file in files"  title = "{{ file.titulo }}" data-ng-class="{ 'selected' : selection.file.id == file.id }">
+                <a href="#" data-ng-click="selectFile(file)">{{ file.name }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="span1" data-ng-cloak>
-            <button class="btn btn-success btn-short pull-right" title="siguiente" data-ng-show="vizShown" data-ng-click="next()" data-ng-class="{disabled: lastFile}">
-                <i class="icon-chevron-right"></i>
-            </button>
-            <button class="btn btn-success btn-short pull-right" title="anterior" data-ng-show="vizShown" data-ng-click="prev()" data-ng-class="{disabled: firstFile}">
-                <i class="icon-chevron-left"></i>
-            </button>
+          <button class="btn btn-success btn-short pull-right" title="siguiente" data-ng-show="vizShown" data-ng-click="next()" data-ng-class="{disabled: lastFile}">
+            <i class="icon-chevron-right"></i>
+          </button>
+          <button class="btn btn-success btn-short pull-right" title="anterior" data-ng-show="vizShown" data-ng-click="prev()" data-ng-class="{disabled: firstFile}">
+            <i class="icon-chevron-left"></i>
+          </button>
         </div>
-    </div>
-	<div class="row row-selects">
-		 <div class="span3"><strong>{{ vote.sesion }}</strong></div>
-		 <div class="span9">{{ selection.file.titulo }}</div> 
-	</div>
-    <div class="row mbl">
+      </div>
+      <div class="row row-selects">
+	<div class="span3"><strong>{{ vote.sesion }}</strong></div>
+	<div class="span9">{{ selection.file.titulo }}</div> 
+      </div>
+      <div class="row mbl">
         <div class="span9">
-            <div id="cuadrantes">
-            </div>
+          <div id="cuadrantes">
+          </div>
         </div>
         <div class="span3">
-            <div class="results" data-ng-show="vizShown" data-ng-cloak>
-                <ul class="unstyled ul-resultados">
-                    <li><strong>Resultado: </strong> <span class="label label-large" data-ng-class="{'label-success': vote.resultado == 'AFIRMATIVO', 'label-important': vote.resultado == 'NEGATIVO'}">{{ vote.resultado }}</span></li>
-                    <li><strong>Presidente: </strong><span class="label label-large" data-ng-class="{'label-success': vote.votopresidente == '0', 'label-important': vote.votopresidente == '1'}">{{ vote.presidente }}</span></li>
-                    <!--<li><strong>Base: </strong> {{ vote.base }}</li>-->
-                    <!--<li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>-->
-                </ul>
-
-                <ul class="nav nav-list nav-list-vivid">
-                    <li>
-                        <div class="resultItem">
-                            Presentes
-    						<span class="nav-counter nav-counter-porcentaje">{{ vote.presentes_p }} %</span>
-                            <span class="nav-counter nav-counter-num nav-counter-presentes">{{ vote.presentes }}</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="resultItem">
-                            Ausentes
-							<span class="nav-counter nav-counter-porcentaje">{{ vote.ausentes_p }} %</span>
-                            <span class="nav-counter nav-counter-num">{{ vote.ausentes }}</span>
-                        </div>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Votación</li>
-                    <li>
-                        <div class="resultItem">
-                            Afirmativos
-							<span class="nav-counter nav-counter-porcentaje">{{ vote.afirmativos_p }} %</span>
-                            <span class="nav-counter nav-counter-num nav-counter-afirmativos">{{ vote.afirmativos }}</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="resultItem">
-                            Negativos
-							<span class="nav-counter nav-counter-porcentaje">{{ vote.negativos_p }} %</span>
-                            <span class="nav-counter nav-counter-num nav-counter-negativos">{{ vote.negativos }}</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="resultItem">
-                            Abstenciones
-							<span class="nav-counter nav-counter-porcentaje">{{ vote.abstenciones_p }} %</span>
-                            <span class="nav-counter nav-counter-num nav-counter-abstenciones">{{ vote.abstenciones }}</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <ul class="nav nav-tabs hide">
-                <li class="active"><a href="#tab-bloques" data-toggle="tab" class="tab-btn">Bloques</a></li>
-                <li><a href="#tab-diputados" data-toggle="tab" class="tab-btn">Diputados</a></li>
+          <div class="results" data-ng-show="vizShown" data-ng-cloak>
+            <ul class="unstyled ul-resultados">
+              <li><strong>Resultado: </strong> <span class="label label-large" data-ng-class="{'label-success': vote.resultado == 'AFIRMATIVO', 'label-important': vote.resultado == 'NEGATIVO'}">{{ vote.resultado }}</span></li>
+              <li><strong>Presidente: </strong><span class="label label-large" data-ng-class="{'label-success': vote.votopresidente == '0', 'label-important': vote.votopresidente == '1'}">{{ vote.presidente }}</span></li>
+              <!--<li><strong>Base: </strong> {{ vote.base }}</li>-->
+              <!--<li><strong>Mayoría: </strong> {{ vote.mayoria }}</li>-->
             </ul>
-            <div class="tab-content">
-                <div class="bloques tab-pane active" id="tab-bloques" data-ng-show="blocks">
-                    <ul class="unstyled block-list">
-                        <li data-ng-repeat="block in blocks">
-                            <div>
-                                <input type="checkbox" class="chk-bloque" value="{{ block.id }}"/>
-                                <div class="key" style="background-color: {{ block.color }}"></div>
-                                <p>{{ block.name }} ({{ block.members }})</p>
-                            </div>
-    					</li>
-                    </ul>
-                    <button class="chk-bloque-ninguno btn-link">Ninguno</button>
+
+            <ul class="nav nav-list nav-list-vivid">
+              <li>
+                <div class="resultItem">
+                  Presentes
+    		  <span class="nav-counter nav-counter-porcentaje">{{ vote.presentes_p }} %</span>
+                  <span class="nav-counter nav-counter-num nav-counter-presentes">{{ vote.presentes }}</span>
                 </div>
-    			<div class="diputados tab-pane" id="tab-diputados" data-ng-show="cmen">
-                    <ul class="unstyled block-list">
-                        <li data-ng-repeat="congressman in cmen">
-                            <div>
-                                <input type="checkbox" class="chk-diputado" value="{{ congressman.id }}"/>
-					<div class="key" style="background-color: {{ congressmenBlock }}"></div>
-					<p class="voto{{ congressman.vote }}">
-					  <a target="_blank" href="http://parlamentoabierto.org.py/parlamentarios/{{ congressman.id }}">
-					    {{ congressman.name }}
-					  </a>
-					</p>
-                            </div>
-    			</li>
-                    </ul>
-                    <button class="chk-diputado-ninguno btn-link">Ninguno</button>
+              </li>
+              <li>
+                <div class="resultItem">
+                  Ausentes
+		  <span class="nav-counter nav-counter-porcentaje">{{ vote.ausentes_p }} %</span>
+                  <span class="nav-counter nav-counter-num">{{ vote.ausentes }}</span>
                 </div>
+              </li>
+              <li class="divider"></li>
+              <li class="nav-header">Votación</li>
+              <li>
+                <div class="resultItem">
+                  SI
+		  <span class="nav-counter nav-counter-porcentaje">{{ vote.afirmativos_p }} %</span>
+                  <span class="nav-counter nav-counter-num nav-counter-afirmativos">{{ vote.afirmativos }}</span>
+                </div>
+              </li>
+              <li>
+                <div class="resultItem">
+                  NO
+		  <span class="nav-counter nav-counter-porcentaje">{{ vote.negativos_p }} %</span>
+                  <span class="nav-counter nav-counter-num nav-counter-negativos">{{ vote.negativos }}</span>
+                </div>
+              </li>
+              <li>
+                <div class="resultItem">
+                  Abstenciones
+		  <span class="nav-counter nav-counter-porcentaje">{{ vote.abstenciones_p }} %</span>
+                  <span class="nav-counter nav-counter-num nav-counter-abstenciones">{{ vote.abstenciones }}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav nav-tabs hide">
+            <li class="active"><a href="#tab-bloques" data-toggle="tab" class="tab-btn">Bloques</a></li>
+            <li><a href="#tab-diputados" data-toggle="tab" class="tab-btn">Diputados</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="bloques tab-pane active" id="tab-bloques" data-ng-show="blocks">
+              <ul class="unstyled block-list">
+                <li data-ng-repeat="block in blocks">
+                  <div>
+                    <input type="checkbox" class="chk-bloque" value="{{ block.id }}"/>
+                    <div class="key" style="background-color: {{ block.color }}"></div>
+                    <p>{{ block.name }} ({{ block.members }})</p>
+                  </div>
+    		</li>
+              </ul>
+              <button class="chk-bloque-ninguno btn-link">Ninguno</button>
             </div>
-	    <div class="compartir">
-		<ul class="unstyled">
-                  <li><strong>Comparte:</strong>
-		    <a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-primary btn-short pull-right">
-			<i class="icon-map-marker"></i>
-		    </a>
-		    <a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank" data-toggle="modal" title="comparte por FB la votación actual" class="btn btn-info btn-short pull-right">
-			<i class="icon-globe"></i>
-		    </a>
-	            <a href="#iframe" data-toggle="modal" title="obtener código para tu sitio" class="btn btn-warning btn-short pull-right">
-			<i class="icon-star"></i>
-		    </a>
-	            <a href="#enlaceperm" data-toggle="modal" title="obtener enlace permanente" class="btn btn-danger btn-short pull-right">
-			<i class="icon-envelope"></i>
-		    </a>
-		  </li>
-	      </div>
-	      <br>
-	      <div class="gs-share">
-		<ul class="unstyled">
-                  <li><strong>Redes libres:</strong>
-                     <button data-url="{{ permalink }}" data-title="Mira esta votación de diputados via @tedicpy : " class="js-gs-share gs-share--icon"></button>
-		  </li>
-		</ul>
-	      </div>
+    	    <div class="diputados tab-pane" id="tab-diputados" data-ng-show="cmen">
+              <ul class="unstyled block-list">
+                <li data-ng-repeat="congressman in cmen">
+                  <div>
+                    <input type="checkbox" class="chk-diputado" value="{{ congressman.id }}"/>
+		    <div class="key" style="background-color: {{ congressmenBlock }}"></div>
+		    <p class="voto{{ congressman.vote }}">
+		      <a target="_blank" href="http://parlamentoabierto.org.py/parlamentarios/{{ congressman.id }}">
+			{{ congressman.name }}
+		      </a>
+		    </p>
+                  </div>
+    		</li>
+              </ul>
+              <button class="chk-diputado-ninguno btn-link">Ninguno</button>
+            </div>
+          </div>
+	  <div class="compartir">
+	    <ul class="unstyled">
+              <li><strong>Comparte:</strong>
+		<a href="https://twitter.com/intent/tweet?text=Votación%20nominal%3A&amp;tw_p=tweetbutton&amp;via=tedicpy;url={{ permalink }}" target="_blank" data-toggle="modal" title="tuitear la votación actual" class="btn btn-primary btn-short pull-right">
+		  <i class="icon-map-marker"></i>
+		</a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank" data-toggle="modal" title="comparte por FB la votación actual" class="btn btn-info btn-short pull-right">
+		  <i class="icon-globe"></i>
+		</a>
+	        <a href="#iframe" data-toggle="modal" title="obtener código para tu sitio" class="btn btn-warning btn-short pull-right">
+		  <i class="icon-star"></i>
+		</a>
+	        <a href="#enlaceperm" data-toggle="modal" title="obtener enlace permanente" class="btn btn-danger btn-short pull-right">
+		  <i class="icon-envelope"></i>
+		</a>
+	      </li>
+	  </div>
+	  <br>
+	  <div class="gs-share">
+	    <ul class="unstyled">
+              <li><strong>Redes libres:</strong>
+                <button data-url="{{ permalink }}" data-title="Mira esta votación de diputados via @tedicpy : " class="js-gs-share gs-share--icon"></button>
+	      </li>
+	    </ul>
+	  </div>
         </div>
-    </div>
-<!-- por lupa -->
-<div class="modal hide fade" id="enlaceperm">
-    <div class="modal-header">
-        <p>El siguiente es un enlace permanente a esta votación:</p>
-        <pre><code>{{ permalink }}</code></pre>
+      </div>
+      <!-- por lupa -->
+      <div class="modal hide fade" id="enlaceperm">
+	<div class="modal-header">
+          <p>El siguiente es un enlace permanente a esta votación:</p>
+          <pre><code>{{ permalink }}</code></pre>
         </div>
-</div>
-<div class="modal hide fade" id="iframe">
-    <div class="modal-header">
-        <p>Copia y pega el siguiente código HTML en tu sitio par embeber esta votación:</p>
-        <pre><code>&lt;iframe src="{{ permaiframe }}" width="700" height="800" frameborder="0" scrolling="no"&gt;&lt;iframe&gt;</code></pre>
+      </div>
+      <div class="modal hide fade" id="iframe">
+	<div class="modal-header">
+          <p>Copia y pega el siguiente código HTML en tu sitio par embeber esta votación:</p>
+          <pre><code>&lt;iframe src="{{ permaiframe }}" width="700" height="800" frameborder="0" scrolling="no"&gt;&lt;iframe&gt;</code></pre>
+	</div>
+      </div>
+      <!-- fin por lupa -->
     </div>
-</div>
-<!-- fin por lupa -->
-</div>
-<div id="introduccion"></div>
-<div id="footer"></div>
-</body>
+    <div id="introduccion"></div>
+    <div id="footer"></div>
+  </body>
 
 </html>
