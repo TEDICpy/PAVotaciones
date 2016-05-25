@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 @font-face {
   font-family: "Flat-UI-Icons";
   src: url("../fonts/Flat-UI-Icons.eot");
@@ -1340,7 +1340,7 @@ a.muted:focus {
 }
 .navbar .nav > li > a {
   color: #526476;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14.994px;
   /* 15px */
 
