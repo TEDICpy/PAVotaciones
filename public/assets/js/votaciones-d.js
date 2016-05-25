@@ -11,7 +11,7 @@ var Votaciones = function(settings) {
         { index: 0, name: "0", bounds: {x0: 0, y0:0}, countX: 0, countY: 0, title: "SI"},
         { index: 1, name: "1", bounds: {x0: width/2, y0:0}, countX: 0, countY: 0, title: "NO"},
         { index: 2, name: "2", bounds: {x0: 0, y0:height/2}, countX: 0, countY: 0, title: "Abstenciones"},
-        { index: 3, name: "3", bounds: {x0: width/2, y0:height/2}, countX: 0, countY: 0, title: "Ausentes"},
+        { index: 3, name: "3", bounds: {x0: width/2, y0:height/2}, countX: 0, countY: 0, title: "No votó"},
     ];
 
     var dotRadius = 10;
