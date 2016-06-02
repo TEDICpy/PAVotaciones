@@ -116,8 +116,8 @@
         </div>
       </div>
       <div class="row row-selects">
-	<div class="span3"><strong>{{ vote.sesion }}</strong></div>
-	<div class="span9">{{ selection.file.titulo }}</div> 
+	<div class="span3"><a href="{{ vote.sesion_url }}" target="blank"> <strong>{{ vote.sesion }} </strong></a></div>
+	<div class="span9"><a href="{{ vote.permalink }}" target="blank">{{ selection.file.titulo }}</a></div> 
       </div>
       <div class="row mbl">
         <div class="span9">
