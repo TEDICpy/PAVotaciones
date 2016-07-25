@@ -81,7 +81,7 @@
             <h2><a href="https://votaciones.parlamentoabierto.org.py/">Votaciones C. Diputados</a></h1>
         </div>
         <div class="span4">
-          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onclick="guiaintro.start();">[?]</a></p>
+          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onClick="guiaintro.start();">[?]</a></p>
         </div>
       </div>
       <div class="row row-selects">
@@ -110,7 +110,7 @@
               </li>
             </ul>
           </div>
-          <div class="btn-group" data-ng-cloak id="guiaasunto">
+          <div class="btn-group" id="guiaasunto" data-ng-cloak>
             <i class="dropdown-arrow dropdown-arrow-inverse"></i>
             <button class="btn btn-info" style="width: 100%" title = "{{ selection.file.titulo }}" data-ng-class="{ disabled: !files }"><strong>Asunto</strong><span data-ng-show="selection.file">: {{ selection.file.name | truncate:45 }}</span> </button>
             <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !files }" data-toggle="dropdown">
