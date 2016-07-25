@@ -8,6 +8,7 @@
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/tedic.css" rel="stylesheet"/>
     <link href="assets/css/main.css" rel="stylesheet"/>
+
     <!-- Piwik -->
     <script type="text/javascript">
      var _paq = _paq || [];
@@ -26,6 +27,9 @@
     <!-- Por lupa para comprartir en GNUSocial-->
     <script src="gs-share/js/gs-share.js"></script>
     <script src="gs-share/js/locale/es.js"></script>
+    <!-- Por lupa para la visita guiada -->
+    <script src="assets/js/intro.js"></script>
+    <!-- Fin lupa -->
     <script src="assets/js/Constantes.js"></script>
     <script src="assets/js/d3.v3.min.js"></script>
     <script src="assets/js/d3tooltip.js"></script>
@@ -64,12 +68,12 @@
             <h2><a href="https://votaciones.parlamentoabierto.org.py/">Votaciones C. Diputados</a></h1>
         </div>
         <div class="span4">
-          <p class="archivo">Seleccione votación por año y fecha</p>
+          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">[?]</a></p>
         </div>
       </div>
       <div class="row row-selects">
         <div class="span11">
-          <div class="btn-group" data-ng-cloak>
+          <div class="btn-group" data-ng-cloak data-step="1" data-intro="Primero selecciona año">
             <i class="dropdown-arrow dropdown-arrow-inverse"></i>
             <button class="btn btn-info" data-ng-class="{ disabled: !years }"><strong>Año</strong><span data-ng-show="selection.year">: {{ selection.year }}</span> </button>
             <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !years }" data-toggle="dropdown">
