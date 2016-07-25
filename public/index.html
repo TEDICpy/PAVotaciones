@@ -33,13 +33,13 @@
     <script type="text/javascript">
 	var guiaintro;
 	$(document).ready(function() {
-        guiaintro = introJs();
-        guiaintro.setOptions({ 'skipLabel': 'Finalizar' , 'doneLabel': 'Fin', 'nextLabel': 'Próx', 'prevLabel': 'Ant'});
-        //pasos
-        $("#guiaanio").attr("data-intro","Selecciona el año aquí", "1");
-        $("#guiames").attr("data-intro","Luego selecciona el mes", "2");
-        $("#guiaasunto").attr("data-intro","Finalmente el asunto", "3");
-        $("#cuadrantes").attr("data-intro","Aparecerán 4 cuadrantes: <br />1. Votaron SI<br />2. Votaron NO<br />3. Votaron 'ABSTENCION'<br />4. No presionaron en botón", "4");
+          guiaintro = introJs();
+          guiaintro.setOptions({ 'skipLabel': 'Finalizar' , 'doneLabel': 'Fin', 'nextLabel': 'Próx', 'prevLabel': 'Ant'});
+          //pasos
+          $("#guiaanio").attr("data-intro","Selecciona el año aquí", "1");
+          $("#guiames").attr("data-intro","Luego selecciona el mes", "2");
+          $("#guiaasunto").attr("data-intro","Finalmente el asunto", "3");
+          $("#cuadrantes").attr("data-intro","Aparecerán 4 cuadrantes: <br />1. Votaron SI<br />2. Votaron NO<br />3. Votaron 'ABSTENCION'<br />4. No presionaron en botón", "4");
 	});
     </script> 
     <!-- Fin lupa -->
@@ -81,7 +81,7 @@
             <h2><a href="https://votaciones.parlamentoabierto.org.py/">Votaciones C. Diputados</a></h1>
         </div>
         <div class="span4">
-          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onClick="guiaintro.start();">[?]</a></p>
+          <p class="archivo">Seleccione votación por año y fecha <a href="#" onClick="guiaintro.start();">[?]</a></p>
         </div>
       </div>
       <div class="row row-selects">
