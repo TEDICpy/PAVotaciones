@@ -68,12 +68,12 @@
             <h2><a href="https://votaciones.parlamentoabierto.org.py/">Votaciones C. Diputados</a></h1>
         </div>
         <div class="span4">
-          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">[?]</a></p>
+          <p class="archivo">Seleccione votación por año y fecha <a href="javascript:void(0);" onclick="javascript:introJs().start();">[?]</a></p>
         </div>
       </div>
       <div class="row row-selects">
         <div class="span11">
-          <div class="btn-group" data-ng-cloak data-step="1" data-intro="Primero selecciona año">
+          <div class="btn-group" data-ng-cloak data-step="1" data-intro="Primero selecciona aqui">
             <i class="dropdown-arrow dropdown-arrow-inverse"></i>
             <button class="btn btn-info" data-ng-class="{ disabled: !years }"><strong>Año</strong><span data-ng-show="selection.year">: {{ selection.year }}</span> </button>
             <button class="btn btn-info dropdown-toggle" data-ng-class="{ disabled: !years }" data-toggle="dropdown">
