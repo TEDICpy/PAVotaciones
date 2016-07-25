@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Parlamento Abierto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/flat-ui/css/flat-ui.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/tedic.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="modal hide fade" id="intromodal">
+    <div class="modal-header">
+        <h3>Parlamento Abierto</h3>
+    </div>
+    <div class="modal-body">
+        <table id="referencetable">
+            <tr>
+                <td class="quadrant0">SI</td>
+                <td class="quadrant1">NO</td>
+            </tr>
+            <tr>
+                <td class="quadrant2">Abstenciones</td>
+                <td class="quadrant3">Ausentes</td>
+            </tr>
+        </table>
+        <p>Esta aplicación muestra las más de 200 votaciones nominales de las Cámara de Diputados (2013-2014) de acuerdo a las actas oficiales (<a href="http://www.diputados.gov.py/ww2/?pagina=sesiondigital" target="_blank" title = "Diputados" alt = "Diputados">diputados</a>).</p>
+		<p>Utilice los selectores de Año, Fecha y Asunto para elegir la votación.</p>
+		<p>En los cuadrantes se ubicará cada legislador coloreado por bloque político, según si su voto fue <span class="quadrant0">Afirmativo</span> o <span class="quadrant1">Negativo</span>, si optó por la <span class="quadrant2">Abstención</span> o si estuvo <span class="quadrant3">Ausente</span>.</p>
+		<p>El panel de la derecha mostrará el resultado, base y tipo de mayoría requerida, asistencia y números de cada votación, incluyendo el voto del presidente cuando lo hubo.</p>
+		<p>Utilice las casillas de verificación de bloques y legisladores para resaltarlos y observar mejor sus trayectorias entre votaciones.</p>
+		<p>También puede copiar el enlace de cada votación para compartirlo por e-mail y redes sociales.</p>    </div>
+    <div class="modal-footer">
+        <a href="index-d.html" class="btn btn-info btn-large">Diputados</a>
+<!--        <a href="index-s.html" class="btn btn-danger btn-large">Senadores</a>-->
+    </div>
+</div>
+<script src="assets/flat-ui/js/jquery-1.8.3.min.js"></script>
+<script src="assets/flat-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="assets/flat-ui/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/flat-ui/js/bootstrap.min.js"></script>
+<script src="assets/flat-ui/js/jquery.stacktable.js"></script>
+<script src="assets/js/Constantes.js"></script>
+<script>
+    $('#intromodal').modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', CUENTA_GOOGLE_ANALYTICS, 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
