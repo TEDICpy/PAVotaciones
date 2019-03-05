@@ -1,0 +1,14 @@
+pavotdb:
+  image: mysql:latest
+  env_file: mysql.env
+  volumes:
+    - wpdb:/var/lib/mysql
+pavotweb:
+  image: php:5-apache
+  ports:
+    - "8999:80"
+  volumes:
+    - ./public:/var/www/html/
+    - /etc/localtime:/etc/localtime:ro
+  links:
+    - pavotdb

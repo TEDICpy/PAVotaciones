@@ -8,3 +8,6 @@ public/assets/img/Thumbs.db
 public/assets/img/dashboard-high-512.png
 public/assets/img/disciplinometer-table.png
 public/assets/img/speedometer-.png
+*.env
+*.sql
+public/server/conexion.php

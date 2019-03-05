@@ -1,1 +1,0 @@
-Esta carpeta la utiliza el parser para procesar los RTFs
